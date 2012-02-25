@@ -43,5 +43,6 @@ group :test do
   gem 'webrat', '0.7.1'
   gem 'autotest-standalone', :require => 'autotest'
   gem 'autotest-rails-pure'
-  #gem 'turn'
+  gem 'turn'
 end
+
