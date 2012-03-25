@@ -3,26 +3,17 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
-    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-    <!-- 
-    			* the helper automatically appends the .css  to the  filenames if absent 
-    			
-    			* two lines of code above are calls to functions, could be written:
-    				 		stylesheet_link_tag('blueprint/screen', :media => 'screen')
-    				 		
-    			* media arguement is a hash, when a hash is the last arguement
-    			   in a function call, the curly braces are optional. Could be written:
-    			  		 stylesheet_link_tag 'blueprint/screen', { :media => 'screen' }
-    			  		 
-    			* the resulting html code would look like:
-    					<link href="/stylesheets/blueprint/screen.css" media="screen" 
-    							rel="stylesheet" type="text/css" />
-    					<link href="/stylesheets/blueprint/print.css" media="print" r
-    							el="stylesheet" type="text/css" />
-    -->
+   <%= render 'layouts/stylesheets' %>
+
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+     <%= render 'layouts/header' %>
+      <section class="round">
+        <%= yield %>
+      </section>
+       <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
+
