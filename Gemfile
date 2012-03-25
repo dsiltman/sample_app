@@ -33,7 +33,7 @@ gem 'will_paginate', '3.0.pre2'
 
 group :development do
   gem 'rspec-rails', '2.6.1'
-  gem 'web-app-theme', '>= 0.6.2'
+  gem 'web-app-theme-rails'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
 end
@@ -43,5 +43,10 @@ group :test do
   gem 'webrat', '0.7.1'
   gem 'autotest-standalone', :require => 'autotest'
   gem 'autotest-rails-pure'
+  gem 'ZenTest'
   #gem 'turn'
+end
+
+group :development, :test do
+  gem 'web-app-theme', '>= 0.6.2'
 end
